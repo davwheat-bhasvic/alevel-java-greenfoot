@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Turret
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Turret\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=sb
+comment1.target=Turret(StatusBoard)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Turret\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ handleRotation()
+comment4.params=
+comment4.target=void\ handlePower()
+comment5.params=cannonBallsExist\ world
+comment5.target=void\ handleCannonBallShoot(boolean,\ CannonWorld)
+numComments=6
