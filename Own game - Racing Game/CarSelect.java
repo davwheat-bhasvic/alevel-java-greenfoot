@@ -65,7 +65,7 @@ class CarSelect extends World {
         
         setBackground("dark-background.png");
         
-        for (int i = 1; i <= 17; i++) {
+        for (int i = 1; i <= 18; i++) {
             if (playerNumber == 1 || i != gameData.player1car) {
                 carOptions.add(new Car(i));
             }
