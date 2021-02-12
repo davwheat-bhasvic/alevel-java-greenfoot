@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class TextBox here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class TextBox extends Common {
     private GreenfootImage image;
     protected static final Font textFont = new Font("Bahnschrift", false, false, 24);

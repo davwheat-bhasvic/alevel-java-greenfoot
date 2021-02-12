@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class MenuItem here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MenuItem extends MenuItems {
     private GreenfootImage image;
     private GreenfootImage foreground;

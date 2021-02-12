@@ -2,12 +2,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 import java.util.ArrayList;
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Menu extends World {
     private Sound themeSong;
     
@@ -93,7 +87,7 @@ public class Menu extends World {
         removeObject(exitButton);
         removeObject(menuInstructions);
         
-        rules = new TextBox("Player 1 drives using WASD.\n\nPlayer 2 drives with arrow keys.\n\nYou must stay on the circuit.\n\nDriving over the grass is impossible.", 700, 200);
+        rules = new TextBox("Your display must be 1080p or higher to show the track correctly.\n\nPlayer 1 drives using WASD.\n\nPlayer 2 drives with arrow keys.\n\nYou must stay on the circuit.\n\nDriving over the grass is impossible.", 700, 300);
         
         addObject(rules, 500, 400);
         

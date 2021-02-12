@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=CarWithLogic
+comment1.params=
+comment1.target=int\ getCurrentLap()
+comment2.params=
+comment2.target=int\ getCurrentSector()
+comment3.params=carNumber\ playerNumber
+comment3.target=CarWithLogic(int,\ int)
+comment4.params=
+comment4.target=void\ enableMovement()
+comment5.params=
+comment5.target=void\ disableMovement()
+comment6.params=
+comment6.target=boolean\ canMove()
+comment7.params=world
+comment7.target=boolean\ isOnStartFinishLine(greenfoot.World)
+comment8.params=
+comment8.target=int\ getSector()
+comment9.params=
+comment9.target=void\ act()
+numComments=10

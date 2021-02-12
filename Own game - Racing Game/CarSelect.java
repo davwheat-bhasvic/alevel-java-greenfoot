@@ -3,7 +3,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 class CarSelect extends World {
-    
     protected GameData gameData;
     
     protected Sound buildUpSound;
@@ -39,11 +38,7 @@ class CarSelect extends World {
     private int c4pos = 775;
     private int c5pos = 900;
 
-    /**
-     * Constructor for objects of class PlayerSelect.
-     */
-    public CarSelect(int playerNumber, Sound buildUpSound, GameData gameData)
-    {
+    public CarSelect(int playerNumber, Sound buildUpSound, GameData gameData) {
         super(1000, 800, 1);
         
         this.buildUpSound = buildUpSound;
@@ -71,12 +66,17 @@ class CarSelect extends World {
         setBackground("dark-background.png");
         
         for (int i = 1; i <= 17; i++) {
-            carOptions.add(new Car(i));
+            if (playerNumber == 1 || i != gameData.player1car) {
+                carOptions.add(new Car(i));
+            }
         }
         
         c3 = carOptions.get(0);
         c4 = carOptions.get(1);
         c5 = carOptions.get(2);
+        
+        if (playerNumber == 1) gameData.player1car = c3.carNumber;
+        else gameData.player2car = c3.carNumber;
         
         addObject(c3, c3pos, 400);
         addObject(c4, c4pos, 400);
@@ -85,7 +85,6 @@ class CarSelect extends World {
         leftArrow = new LeftArrowIndicator();
         rightArrow = new RightArrowIndicator();
         
-        addObject(leftArrow, 380, 400);
         addObject(rightArrow, 620, 400);
     }
     
@@ -99,8 +98,6 @@ class CarSelect extends World {
                 removeObject(rightArrow);
                 continueButton.select();
             } else {
-                addObject(leftArrow, 300, 400);
-                addObject(rightArrow, 700, 400);
                 continueButton.deselect();
             }
         } else {
@@ -197,7 +194,7 @@ class CarSelect extends World {
     private void handleMenuSelection() {
         if (Greenfoot.isKeyDown("enter")) {
             if (selectedItem == 1) {
-                //showRules();
+                nextScreen();
             }
         }
     }
@@ -206,6 +203,8 @@ class CarSelect extends World {
         if (selectedItem != 0) return;
         
         boolean changed = false;
+        
+        updateArrows();
         
         if (Greenfoot.isKeyDown("left") && selectedCar != 0) {
             selectedCar--;
@@ -221,6 +220,22 @@ class CarSelect extends World {
         
         if (changed) {
             animateCircuits();
+            updateArrows();
         }
+    }
+    
+    private void updateArrows() {
+        addObject(leftArrow, 380, 400);
+        addObject(rightArrow, 620, 400);
+    
+        if (selectedCar == 0) {
+            removeObject(leftArrow);
+        } else if (selectedCar == carOptions.size() - 1) {
+            removeObject(rightArrow);
+        }
+    }
+    
+    protected void nextScreen() {
+        // dummy function to be overridden in subclasses
     }
 }

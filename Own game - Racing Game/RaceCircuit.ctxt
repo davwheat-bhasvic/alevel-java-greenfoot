@@ -1,7 +1,20 @@
 #BlueJ class context
 comment0.target=RaceCircuit
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ RaceCircuit\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=RaceCircuit()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ RaceCircuit.\r\n\ \r\n
-numComments=2
+comment1.target=CircuitData\ getCircuitData()
+comment2.params=buildUpSound\ gameData
+comment2.target=RaceCircuit(Sound,\ GameData)
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ RaceCircuit.\r\n\ \r\n
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ setUpCircuit()
+comment5.params=
+comment5.target=void\ incrementStage()
+comment6.params=
+comment6.target=void\ startLoading()
+comment7.params=
+comment7.target=void\ stopLoading()
+comment8.params=winningPlayer
+comment8.target=void\ endGame(int)
+numComments=9

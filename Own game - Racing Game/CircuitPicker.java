@@ -57,9 +57,12 @@ public class CircuitPicker extends World {
         
         circuitOptions.add(new CircuitView("monza"));
         circuitOptions.add(new CircuitView("spa"));
+        circuitOptions.add(new CircuitView("monaco"));
         
         c2 = circuitOptions.get(0);
         c3 = circuitOptions.get(1);
+        
+        gameData.circuitName = c2.circuitName;
         
         addObject(c2, 500, 400);
         addObject(c3, 950, 400);
@@ -67,7 +70,6 @@ public class CircuitPicker extends World {
         leftArrow = new LeftArrowIndicator();
         rightArrow = new RightArrowIndicator();
         
-        addObject(leftArrow, 300, 400);
         addObject(rightArrow, 700, 400);
     }
         
@@ -75,6 +77,9 @@ public class CircuitPicker extends World {
         if (c1 != null) { removeObject(c1); }
         if (c2 != null) { removeObject(c2); }
         if (c3 != null) { removeObject(c3); }
+        
+        boolean reAddLeftArrow = selectedCircuit != 0 && getObjects(LeftArrowIndicator.class).size() == 0;
+        boolean reAddRightArrow = selectedCircuit != circuitOptions.size() - 1 && getObjects(RightArrowIndicator.class).size() == 0;
         
         if (selectedCircuit == 0) {
             c1 = null;
@@ -113,8 +118,6 @@ public class CircuitPicker extends World {
                 removeObject(rightArrow);
                 continueButton.select();
             } else {
-                addObject(leftArrow, 300, 400);
-                addObject(rightArrow, 700, 400);
                 continueButton.deselect();
             }
         } else {
@@ -154,6 +157,8 @@ public class CircuitPicker extends World {
         
         boolean changed = false;
         
+        updateArrows();
+        
         if (Greenfoot.isKeyDown("left") && selectedCircuit != 0) {
             selectedCircuit--;
             changed = true;
@@ -168,6 +173,18 @@ public class CircuitPicker extends World {
         
         if (changed) {
             animateCircuits();
+            updateArrows();
+        }
+    }
+    
+    private void updateArrows() {
+        addObject(leftArrow, 300, 400);
+        addObject(rightArrow, 700, 400);
+    
+        if (selectedCircuit == 0) {
+            removeObject(leftArrow);
+        } else if (selectedCircuit == circuitOptions.size() - 1) {
+            removeObject(rightArrow);
         }
     }
     

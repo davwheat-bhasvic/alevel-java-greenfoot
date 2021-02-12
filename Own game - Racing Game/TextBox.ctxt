@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=TextBox
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TextBox\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=text\ width\ height
 comment1.target=TextBox(java.lang.String,\ int,\ int)
 numComments=2

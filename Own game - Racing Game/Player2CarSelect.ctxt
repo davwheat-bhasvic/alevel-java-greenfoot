@@ -2,5 +2,6 @@
 comment0.target=Player2CarSelect
 comment1.params=buildUpSound\ gameData
 comment1.target=Player2CarSelect(Sound,\ GameData)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Player2CarSelect.\r\n\ \r\n
-numComments=2
+comment2.params=
+comment2.target=void\ nextScreen()
+numComments=3

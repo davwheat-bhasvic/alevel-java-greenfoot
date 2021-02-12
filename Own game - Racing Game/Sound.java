@@ -60,4 +60,12 @@ public class Sound
     public void stopSound() {
         music.stop();
     }
+    
+    public int getVolume() {
+        return music.getVolume();
+    }
+    
+    public void setVolume(int volume) {
+        music.setVolume(volume);
+    }
 }

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=CircuitData
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CircuitData\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=CircuitData()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ CircuitData\r\n
+comment2.params=
+comment2.target=CircuitData\ Monza()
+comment3.params=
+comment3.target=CircuitData\ Spa()
+comment4.params=
+comment4.target=CircuitData\ Monaco()
+numComments=5

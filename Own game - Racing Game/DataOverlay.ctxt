@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=DataOverlay
+comment1.params=totalLaps
+comment1.target=DataOverlay(int)
+comment2.params=text
+comment2.target=greenfoot.GreenfootImage\ generateImage(java.lang.String)
+comment3.params=currentLap
+comment3.target=void\ setLapsPlayer1(int)
+comment4.params=currentLap
+comment4.target=void\ setLapsPlayer2(int)
+comment5.params=p1\ p2
+comment5.target=void\ setLaps(int,\ int)
+comment6.params=p1\ p2
+comment6.target=void\ setSectors(int,\ int)
+numComments=7
